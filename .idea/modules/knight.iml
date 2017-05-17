@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="knight" external.linked.project.path="D:/Google Drive/Documenti/Personale/Manuali/Spring/Spring Framework/Spring in Action, 4th Edition/SourceCode/Chapter_01/knight" external.root.project.path="D:/Google Drive/Documenti/Personale/Manuali/Spring/Spring Framework/Spring in Action, 4th Edition/SourceCode/Chapter_01/knight" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://D:/Google Drive/Documenti/Personale/Manuali/Spring/Spring Framework/Spring in Action, 4th Edition/SourceCode/Chapter_01/knight">
+      <excludeFolder url="file://D:/Google Drive/Documenti/Personale/Manuali/Spring/Spring Framework/Spring in Action, 4th Edition/SourceCode/Chapter_01/knight/.gradle" />
+      <excludeFolder url="file://D:/Google Drive/Documenti/Personale/Manuali/Spring/Spring Framework/Spring in Action, 4th Edition/SourceCode/Chapter_01/knight/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
