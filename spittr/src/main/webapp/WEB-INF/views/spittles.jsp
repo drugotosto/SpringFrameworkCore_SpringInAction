@@ -13,16 +13,10 @@
     "c:forEach" tag to render the list of spittles.
 -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-    <title>Spitter</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/style.css" />" >
-</head>
-<body>
+
 <div class="listTitle">
     <h1>Recent Spittles</h1>
     <ul class="spittleList">
-        <jsp:useBean id="spittleList" scope="request" type="java.util.List"/>
         <c:forEach items="${spittleList}" var="spittle" >
             <li id="spittle_<c:out value="spittle.id"/>">
                 <div class="spittleMessage"><c:out value="${spittle.message}" /></div>
@@ -34,5 +28,3 @@
         </c:forEach>
     </ul>
 </div>
-</body>
-</html>

@@ -12,6 +12,8 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
+import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
 @EnableWebMvc
@@ -27,19 +29,42 @@ public class WebConfig  extends WebMvcConfigurerAdapter {
     with a specific prefix and suffix (for example, a view name of "home" will be resolved
     as "/WEB-INF/views/home.jsp").
     */
-    @Bean
+    /*@Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
-        resolver.setExposeContextBeansAsAttributes(true);
+        resolver.setExposeContextBeansAsAttributes(true);*/
         /*
         But if those JSP files are using JSTL tags for formatting or messages, then you may want to configure
         InternalResourceViewResolver to resolve a JstlView instead.
         This will ensure that JSTL’s formatting and message tags will get the Locale and message sources configured in Spring.
         */
+        /*
         resolver.setViewClass(org.springframework.web.servlet.view.JstlView.class);
         return resolver;
+    }*/
+
+    // Tiles
+    @Bean
+    /*
+    You need a TilesConfigurer bean whose job is to locate and load tile definitions and generally coordinate Tiles
+     */
+    public TilesConfigurer tilesConfigurer() {
+        TilesConfigurer tiles = new TilesConfigurer();
+        /*
+        When configuring a TilesConfigurer, the most important property you set is definitions.
+        This property takes an array of Strings where each entry specifies the location of tile-definition XML files.
+        */
+        tiles.setDefinitions(new String[] {"/WEB-INF/layout/tiles.xml", "/WEB-INF/views/**/tiles.xml"});
+        tiles.setCheckRefresh(true);
+        return tiles;
+    }
+
+    @Bean
+    /* You need a TilesViewResolver bean to resolve logical view names to tile definitions.*/
+    public ViewResolver viewResolver() {
+        return new TilesViewResolver();
     }
 
     /*

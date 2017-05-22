@@ -1,4 +1,6 @@
-<h4>Sviluppo di una microblogging application (stile Twitter) tramite utilizzo di SpringMVC.</h4>
+<h4>Sviluppo della microblogging application "Spittr" (stile Twitter) tramite utilizzo di SpringMVC.</h4>
+
+<p> Esempio preso dal libro Spring in Action</p>
 
 <div><h5>Gli elementi principali sono:</h5>
 <ul>
@@ -11,13 +13,17 @@
 <h5>Il progetto è stato diviso in diverse parti:</h5>
 <ul>
     <li>
-    Gestione delle richieste HTTP GET (con e senza parametri utente) e POST (form).
-    <br>In particolare per quanto riguarda le richieste HTTP GET la gestione dei parametri è stata divisa in:</li>
+        Gestione delle richieste HTTP GET (con e senza parametri utente) e POST (form).
+        <br>In particolare per quanto riguarda le richieste HTTP GET la gestione dei parametri è stata divisa in:
         <ul>
             <li>Query parameters</li>
             <li>Path variables</li>
             <li>Form parameters</li>
         </ul>
+    </li>
     <li>
+       Utilizzo di Apache Tiles come gestore del layout
+    </li>
+    
 </ul>
 </div>
