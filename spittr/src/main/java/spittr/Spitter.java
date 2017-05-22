@@ -41,7 +41,7 @@ public class Spitter {
 
     //Usato per il test (SpitterControllerTest)
     public Spitter(Long id, String username, String password, String firstName, String lastName) {
-        this(null, username, password, firstName, lastName, null);
+        this(id, username, password, firstName, lastName, null);
     }
 
     public Spitter(String username, String password, String firstName, String lastName, String email) {

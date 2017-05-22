@@ -16,6 +16,17 @@ import static org.mockito.Mockito.*;
  * Created by drugo on 19/05/2017.
  */
 public class SpitterControllerTest {
+    /*
+    shouldProcessRegistration() performs a POST request against /spitter/register.
+    As part of that POST request, user information is passed as parameters
+    on the request to simulate a form being submitted.
+    When handling a POST request, it’s usually a good idea to send a redirect after the
+    POST has completed processing so that a browser refresh won’t accidentally submit the form a second time.
+    This test expects that the request will end in a redirect to /spitter/jbauer,
+    the URL path of the new user’s profile page.
+    Finally, the test verifies that the mocked SpitterRepository was actually used to
+    save the data coming in on the form.
+    */
     @Test
     public void shouldProcessRegistration() throws Exception {
         SpitterRepository mockRepository = mock(SpitterRepository.class);

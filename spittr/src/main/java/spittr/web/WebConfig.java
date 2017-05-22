@@ -23,16 +23,22 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebConfig  extends WebMvcConfigurerAdapter {
 
     /*
-    * You add a ViewResolver bean. It’s configured to look for JSP files by wrapping view names
-     with a specific prefix and suffix (for example, a view name of "home" will be resolved
-     as "/WEB-INF/views/home.jsp").
-    * */
+    You add a ViewResolver bean. It’s configured to look for JSP files by wrapping view names
+    with a specific prefix and suffix (for example, a view name of "home" will be resolved
+    as "/WEB-INF/views/home.jsp").
+    */
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         resolver.setExposeContextBeansAsAttributes(true);
+        /*
+        But if those JSP files are using JSTL tags for formatting or messages, then you may want to configure
+        InternalResourceViewResolver to resolve a JstlView instead.
+        This will ensure that JSTL’s formatting and message tags will get the Locale and message sources configured in Spring.
+        */
+        resolver.setViewClass(org.springframework.web.servlet.view.JstlView.class);
         return resolver;
     }
 
