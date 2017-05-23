@@ -24,6 +24,10 @@ public class FakeSpittleRepository implements SpittleRepository {
         return spittles;
     }
 
+    public List<Spittle> findRecent(int count) {
+        return null;
+    }
+
     public List<Spittle> findSpittles(long max, int count) {
         List<Spittle> spittles = new ArrayList<Spittle>();
         for (int i=0; i < count; i++) {
@@ -34,6 +38,10 @@ public class FakeSpittleRepository implements SpittleRepository {
 
     public Spittle findOne(long id) {
         return null;
+    }
+
+    public void save(Spittle spittle) {
+
     }
 
 }

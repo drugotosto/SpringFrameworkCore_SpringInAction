@@ -13,7 +13,15 @@
     "c:forEach" tag to render the list of spittles.
 -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<div class="spittleForm">
+    <h1>Spit it out...</h1>
+    <form method="POST" name="spittleForm">
+        <input type="hidden" name="latitude">
+        <input type="hidden" name="longitude">
+        <textarea name="message" cols="80" rows="5"></textarea><br/>
+        <input type="submit" value="Add" />
+    </form>
+</div>
 <div class="listTitle">
     <h1>Recent Spittles</h1>
     <ul class="spittleList">

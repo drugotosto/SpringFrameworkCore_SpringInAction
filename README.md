@@ -1,2 +1,5 @@
 # SpringFrameworkCore_SpringInAction
-Progetto che contiene diversi moduli/spikes che utilizzano SpringMVC per realizzare divese web-applications. Gli esempi sono tratti dai libri BeginningSpring e SpringInAction
+<p>
+Progetto che contiene diversi moduli/spikes che utilizzano SpringMVC per realizzare divese web-applications.
+<br>Gli esempi sono tratti dal libro SpringInAction.
+</p>

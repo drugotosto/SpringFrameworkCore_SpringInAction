@@ -24,6 +24,10 @@
     <li>
        Utilizzo di Apache Tiles come gestore del layout
     </li>
+    <li>
+        Sviluppo componenti DAO (Repository) per gestione della persistenza dei dati utilizzando DBMS MySql.
+        I componenti @Repository così creati (JdbcSpitterRepository, JdbcSpittleRepository) utilizzano il driver JDBC e quindi interrogazioni SQL.
+    </li>
     
 </ul>
 </div>

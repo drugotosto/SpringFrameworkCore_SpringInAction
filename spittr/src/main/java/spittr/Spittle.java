@@ -19,7 +19,7 @@ import java.util.Date;
 public class Spittle {
     private final Long id;
     private final String message;
-    private final Date time;
+    private Date time;
     private Double latitude;
     private Double longitude;
 
@@ -28,11 +28,15 @@ public class Spittle {
     }
 
     public Spittle(String message, Date time, Double longitude, Double latitude) {
-        this.id = null;
+        this(null, message, time, null, null);
+    }
+
+    public Spittle(Long id, String message, Date time, Double latitude, Double longitude) {
+        this.id = id;
         this.message = message;
         this.time = time;
-        this.longitude = longitude;
         this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public long getId() {

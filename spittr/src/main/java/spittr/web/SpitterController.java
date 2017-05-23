@@ -1,6 +1,7 @@
 package spittr.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ public class SpitterController {
     private SpitterRepository spitterRepository;
 
     @Autowired
-    public SpitterController(SpitterRepository spitterRepository) {
+    public SpitterController(@Qualifier("jdbcSpitterRepository") SpitterRepository spitterRepository) {
         this.spitterRepository = spitterRepository;
     }
 
@@ -31,7 +32,6 @@ public class SpitterController {
         return "registerForm";
     }
 
-    @RequestMapping(value="/register", method=RequestMethod.POST)
     /*
     The new processRegistration() method: it’s given a Spitter object as a parameter.
     This object has firstName, lastName, username, and password properties that will be populated from
@@ -40,10 +40,11 @@ public class SpitterController {
     method on the SpitterRepository that is now injected into SpitterController in
     the constructor.
      */
+    @RequestMapping(value="/register", method=RequestMethod.POST)
     public String processRegistration(Spitter spitter) {
         System.out.println("\nTEST relativo al processamento del form di inserimento dati da parte dell'utente!");
         System.out.println("\nValori ricevuti:\t"+ spitter.getFirstName() + "\t"+ spitter.getLastName());
-        spitterRepository.save(spitter);
+        spitter=spitterRepository.save(spitter);
         /*
           When InternalResourceViewResolver sees the redirect: prefix on the view specification,
           it knows to interpret it as a redirect specification instead of as a view name

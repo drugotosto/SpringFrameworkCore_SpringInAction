@@ -12,8 +12,10 @@ import java.util.List;
 */
 public interface SpittleRepository {
 
-    /*Ritorna i 20 Spittles più recenti*/
+    /*Ritorna i 10 Spittles più recenti*/
     List<Spittle> findRecentSpittles();
+
+    List<Spittle> findRecent(int count);
 
     /*
         The findSpittles() method takes two parameters. The max parameter is a Spittle
@@ -24,6 +26,6 @@ public interface SpittleRepository {
 
     Spittle findOne(long id);
 
-    //void save(Spittle spittle);*/
+    void save(Spittle spittle);
 
 }
