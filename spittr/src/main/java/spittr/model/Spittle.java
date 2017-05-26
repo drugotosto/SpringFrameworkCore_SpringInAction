@@ -1,4 +1,4 @@
-package spittr;
+package spittr.model;
 
 
 import org.apache.commons.lang3.builder.EqualsBuilder;

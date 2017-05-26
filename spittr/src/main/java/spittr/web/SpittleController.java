@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import spittr.Spittle;
+import spittr.model.Spittle;
 import spittr.data.SpittleRepository;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 /**
