@@ -1,6 +1,6 @@
 package spittr.data;
 
-import spittr.domain.Spitter;
+import spittr.model.Spitter;
 
 /**
  * Created by drugo on 19/05/2017.

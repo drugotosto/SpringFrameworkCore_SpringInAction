@@ -1,5 +1,9 @@
-package spittr.domain;
+package spittr.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -9,8 +13,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  * Created by drugo on 19/05/2017.
  */
+@Entity
+@Table(name = "spitter")
 public class Spitter {
 
+    @Id
+    @GeneratedValue
     private Long id;
 
     @NotNull
@@ -55,6 +63,10 @@ public class Spitter {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public Spitter(String username) {
+        this.username = username;
     }
 
     public String getUsername() {

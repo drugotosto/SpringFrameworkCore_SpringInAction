@@ -1,7 +1,7 @@
 package spittr.data;
 
 import org.springframework.stereotype.Component;
-import spittr.domain.Spitter;
+import spittr.model.Spitter;
 
 /**
  * Created by drugo on 19/05/2017.

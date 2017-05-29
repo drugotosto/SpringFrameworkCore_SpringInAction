@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import spittr.domain.Spitter;
+import spittr.model.Spitter;
 import spittr.data.SpitterRepository;
 
 import java.util.Map;

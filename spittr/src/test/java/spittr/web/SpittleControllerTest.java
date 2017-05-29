@@ -2,7 +2,7 @@ package spittr.web;
 
 
 import org.junit.Test;
-import spittr.domain.Spittle;
+import spittr.model.Spittle;
 import spittr.data.SpittleRepository;
 
 import java.util.ArrayList;

@@ -1,9 +1,13 @@
-package spittr.domain;
+package spittr.model;
 
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 
@@ -16,12 +20,20 @@ import java.util.Date;
     is that you’re using Apache Commons Lang for easy implementation of the equals() and hashCode() methods.
     They’ll be valuable in writing a test for the controller handler method.
  */
+@Entity
+@Table(name = "spittle")
 public class Spittle {
-    private final Long id;
-    private final String message;
-    private final Date time;
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String message;
+    private Date time;
     private Double latitude;
     private Double longitude;
+
+    public Spittle() {}
 
     public Spittle(String message, Date time) {
         this(message, time, null, null);
